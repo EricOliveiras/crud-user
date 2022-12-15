@@ -1,0 +1,11 @@
+{
+  "name": "crud-user",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/EricOliveiras/crud-user.git",
+  "author": "Eric Oliveira <oiericoi@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
