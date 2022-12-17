@@ -6,7 +6,7 @@
   "author": "Eric Oliveira <oiericoi@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node src/server.ts"
+    "dev": "docker-compose up -d && nodemon"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
