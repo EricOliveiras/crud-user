@@ -1,11 +1,16 @@
-version: '3'
+version: '3.8'
+
 services:
-  mongodb:
-    image: mongo
-    container_name: user-db
-    environment:
-      - MONGO_INITDB_DATABASE=user-db
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=secret
+  db:
+    image: postgres
+    container_name: db-user
+    restart: always
     ports:
-      - 27017:27017
+      - 54320:5432
+    env_file:
+      - .env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
