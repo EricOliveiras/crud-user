@@ -21,10 +21,18 @@ export const UserRepository = {
     });
   },
 
-  async findOne(email: string) {
+  async findOneByEmail(email: string) {
     return await db.user.findUnique({
       where: { 
         email: email 
+      }
+    })
+  },
+
+  async findOneById(id: string) {
+    return await db.user.findUnique({
+      where: { 
+        id: id 
       }
     })
   },
