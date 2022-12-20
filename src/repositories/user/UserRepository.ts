@@ -37,17 +37,22 @@ export const UserRepository = {
     })
   },
 
-  async update(id: string, data: IUserUpdate) {
-    return await db.user.update({
+  async update(id: string, { full_name, email, phone, password }: IUserUpdate) {
+    await db.user.update({
       where: {
         id: id
       },
-      data: data
+      data: {
+        full_name,
+        email,
+        phone,
+        password
+      }
     })
   },
 
   async delete(id: string) {
-    return await db.user.delete({
+    await db.user.delete({
       where: {
         id: id
       }
