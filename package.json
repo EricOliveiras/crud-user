@@ -6,7 +6,8 @@
   "author": "Eric Oliveira <oiericoi@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "docker-compose up -d && nodemon"
+    "dev": "docker-compose up -d && nodemon",
+    "dev:migrate": "npx prisma migrate dev"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
